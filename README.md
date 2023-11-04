@@ -57,6 +57,21 @@ $ $SPARK_HOME/sbin/start-worker.sh spark://<HOST_IP>:7077
 
 <br/>
 
+## 💻 | Analysis 
+
+- The analysis is done using Spark SQL.
+- Here are some of the analysis done on the data:
+
+|                  Avg Comments by Country                 |                    Max Comments by Country               |
+|:-------------------------------------:|:-------------------------------------:|
+| ![](https://raw.githubusercontent.com/muKaustav/hltv-news-etl/master/images/average_comments_by_country.png "Avg Comments by Country") | ![](https://raw.githubusercontent.com/muKaustav/hltv-news-etl/master/images/max_comments_by_country.png "Max Comments by Country")|
+
+|                  Descriptive Analysis                 |                    Total Articles by Country               |
+|:-------------------------------------:|:-------------------------------------:|
+| ![](https://raw.githubusercontent.com/muKaustav/hltv-news-etl/master/images/descriptive_analysis.png "Descriptive Analysis") | ![](https://raw.githubusercontent.com/muKaustav/hltv-news-etl/master/images/total_articles_by_country.png "Total Articles by Country")|
+
+<br/>
+
 ## 🍻 | Contributing
 
 Contributions, issues and feature requests are welcome.<br>

@@ -9,7 +9,7 @@ df = df.dropna()
 df = df.reset_index(drop=True)
 
 # Plotting total articles by country
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(8, 8))
 plt.bar(df["country_name"], df["total_articles"])
 plt.xlabel("Country")
 plt.ylabel("Total Articles")
@@ -18,7 +18,7 @@ plt.xticks(rotation=90)
 plt.show()
 
 # Plotting maximum comments by country
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(8, 8))
 plt.bar(df["country_name"], df["max_comments"])
 plt.xlabel("Country")
 plt.ylabel("Maximum Comments")
