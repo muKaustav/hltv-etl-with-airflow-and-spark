@@ -40,7 +40,7 @@
 
 ## 🌐 | Setup
 
-- I am running the project on a AWS EC2 t3.medium instance with Ubuntu 22.04 LTS.
+- I am running the project on an AWS EC2 t3.medium instance with Ubuntu 22.04 LTS.
 - Install [Apache Airflow](https://airflow.apache.org/docs/apache-airflow/stable/start.html) & [Apache Spark](https://downloads.apache.org/spark/)  on the EC2 instance.
 - Python version used: 3.10.12 | Java version used: openjdk 11.0.20.1
 - Install the necessary dependencies for the project. (Both pip and npm)
