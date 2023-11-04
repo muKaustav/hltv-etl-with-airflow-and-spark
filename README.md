@@ -26,7 +26,7 @@
 ### _**DAG Structure for current project:**_
 
 <p align = center>
-    <img alt="DAG" src="https://raw.githubusercontent.com/muKaustav/hltv-news-etl/master/images/etl_dag.png" target="_blank" />
+    <img alt="DAG" src="https://raw.githubusercontent.com/muKaustav/hltv-news-etl/master/images/dag.png" target="_blank" />
 
 
 - The DAG consists of 6 tasks:
