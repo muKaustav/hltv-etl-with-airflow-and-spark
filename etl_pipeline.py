@@ -7,7 +7,7 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from airflow.operators.email_operator import EmailOperator
 from datetime import datetime, timedelta
-from pipeline._transform import run_hltv_etl
+from pipeline._transform import run_hltv_transform
 
 HOME = config("HOME")
 PATH = os.path.join(HOME, "airflow", "hltv_dags", "pipeline")
@@ -58,9 +58,9 @@ check_downloaded_file = FileSensor(
     dag=dag,
 )
 
-run_etl = PythonOperator(
+run_transform = PythonOperator(
     task_id="run_etl",
-    python_callable=run_hltv_etl,
+    python_callable=run_hltv_transform,
     dag=dag,
 )
 
@@ -95,9 +95,8 @@ send_email = EmailOperator(
 (
     extract_hltv_news
     >> check_downloaded_file
-    >> run_etl
+    >> run_transform
     >> spark_analysis
     >> clear_temp_files
     >> send_email
 )
-

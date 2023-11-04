@@ -14,7 +14,7 @@ def convert_date_to_str(timestamp):
     return formatted_date
 
 
-def run_hltv_etl():
+def run_hltv_transform():
     with open(PATH + "news.json") as f:
         data = json.load(f)
         df = pd.DataFrame(data)
