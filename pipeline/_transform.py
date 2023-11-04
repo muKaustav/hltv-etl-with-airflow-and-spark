@@ -1,7 +1,6 @@
 import json
 from decouple import config
 import pandas as pd
-import boto3
 from datetime import datetime
 
 PATH = config("HOME") + "/airflow/hltv_dags/pipeline/data/"
@@ -30,7 +29,7 @@ def run_hltv_etl():
         df = df.drop(["country", "date"], axis=1)
 
         df.to_csv(PATH + "news.csv", index=False)
-        
+
         status_dict = {
             "status": "success",
             "message": "File transformed successfully",
