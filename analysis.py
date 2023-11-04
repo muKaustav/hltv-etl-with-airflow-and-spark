@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("stats_2023_11.csv")
+df = pd.read_csv("processed_data.example.csv")
 
 df = df[df["country_name"].str.isnumeric() == False]
 df.loc[df["country_name"] == "Other", "country_name"] = "rest"
@@ -17,15 +17,6 @@ plt.title("Total Articles by Country")
 plt.xticks(rotation=90)
 plt.show()
 
-# Plotting average comments by country
-plt.figure(figsize=(12, 6))
-plt.bar(df["country_name"], df["avg_comments"])
-plt.xlabel("Country")
-plt.ylabel("Average Comments")
-plt.title("Average Comments by Country")
-plt.xticks(rotation=90)
-plt.show()
-
 # Plotting maximum comments by country
 plt.figure(figsize=(12, 6))
 plt.bar(df["country_name"], df["max_comments"])
@@ -33,6 +24,12 @@ plt.xlabel("Country")
 plt.ylabel("Maximum Comments")
 plt.title("Maximum Comments by Country")
 plt.xticks(rotation=90)
+plt.show()
+
+# Create a pie chart for average comments
+plt.figure(figsize=(8, 8))
+plt.pie(df["avg_comments"], labels=df["country_name"], autopct="%1.1f%%")
+plt.title("Average Comments by Country")
 plt.show()
 
 # Summary statistics
