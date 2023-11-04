@@ -19,7 +19,7 @@ def send_failure_email(context):
         task_id="send_failure_email",
         to=NOTIF_EMAIL,
         subject="Airflow alert: HLTV DAG Failed",
-        html_content=f"The HLTV DAG has failed on {str(datetime.today().strftime('%A'))}, {str(datetime.today.strftime('%d/%m/%Y'))} at {str(datetime.today.strftime('%H:%M:%S'))}",
+        html_content=f"The HLTV DAG has failed on {str(datetime.today().strftime('%A'))}, {str(datetime.today.strftime('%d/%m/%Y'))} at {str(datetime.today.strftime('%H:%M:%S'))} UTC.",
         dag=dag,
     )
 
@@ -88,7 +88,7 @@ send_email = EmailOperator(
     task_id="send_email",
     to=NOTIF_EMAIL,
     subject="Airflow alert: HLTV DAG Finished Successfully",
-    html_content=f"The HLTV DAG has finished successfully on {str(datetime.today().strftime('%A'))}, {str(datetime.today().strftime('%d/%m/%Y'))} at {str(datetime.today().strftime('%H:%M:%S'))}",
+    html_content=f"The HLTV DAG has finished successfully on {str(datetime.today().strftime('%A'))}, {str(datetime.today().strftime('%d/%m/%Y'))} at {str(datetime.today().strftime('%H:%M:%S'))} UTC.",
     dag=dag,
 )
 
