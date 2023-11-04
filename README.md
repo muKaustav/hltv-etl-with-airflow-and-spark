@@ -3,7 +3,7 @@
 ## 📚 | Introduction
 
 - [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) (Extract, Transform, Load) is a process in data warehousing responsible for pulling data out of the source systems, transforming it into a more digestible format, and loading it into the data warehouse.
-- In this project, we will be extracting [news data](https://www.hltv.org/news/archive/2023/november) from the [HLTV](https://www.hltv.org/) website, transforming it into a more digestible format, and loading it into AWS S3.
+- In this project, we will be extracting [news data](https://www.hltv.org/news/archive/2023/november) from the [HLTV](https://www.hltv.org/) website, transforming it into a more digestible format, and loading it into [AWS S3](https://aws.amazon.com/s3/).
 - We will be using [Apache Airflow](https://airflow.apache.org/) to schedule the ETL process and [Apache Spark](https://spark.apache.org/) to transform the data.
 
 ### _**Disclaimer**_
