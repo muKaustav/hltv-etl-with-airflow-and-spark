@@ -15,7 +15,7 @@ from pyspark.sql.functions import count, avg, max
 client = boto3.client("s3")
 bucket_name = config("S3_BUCKET_NAME")
 
-PATH = "/home/ubuntu/airflow/hltv_dags/pipeline/data/"
+PATH = config("HOME") + "/airflow/hltv_dags/pipeline/data/"
 
 schema = StructType(
     [

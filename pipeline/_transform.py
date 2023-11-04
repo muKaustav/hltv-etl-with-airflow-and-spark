@@ -1,12 +1,10 @@
 import json
+from decouple import config
 import pandas as pd
 import boto3
 from datetime import datetime
 
-PATH = "/home/ubuntu/airflow/hltv_dags/pipeline/data/"
-
-client = boto3.client("s3")
-bucket_name = "etl-s3-airflow"
+PATH = config("HOME") + "/airflow/hltv_dags/pipeline/data/"
 
 
 def convert_date_to_str(timestamp):
