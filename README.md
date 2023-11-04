@@ -1,4 +1,4 @@
-<h1 align="center">HLTV News ETL with Apache Airflow and Apache Spark 🧭</h1>
+<h1 align="center">HLTV News ETL with Apache Airflow and Spark 🧭</h1>
 
 ## 📚 | Introduction
 
