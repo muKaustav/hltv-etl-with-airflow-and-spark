@@ -60,7 +60,8 @@ $ $SPARK_HOME/sbin/start-worker.sh spark://<HOST_IP>:7077
 ## 💻 | Analysis 
 
 - The analysis is done using Spark SQL.
-- Here are some of the analysis done on the data:
+- The visualizations are done using [Matplotlib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/).
+- Here is some of the analysis done on the data:
 
 |                  Avg Comments by Country                 |                    Max Comments by Country               |
 |:-------------------------------------:|:-------------------------------------:|
